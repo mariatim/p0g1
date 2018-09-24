@@ -1,12 +1,10 @@
 final int canvasSizeW = 841;
 final int canvasSizeH = 1189;
 int currentScreen;
-int nextScreen;
  
  void setup() {
        size(841,1189);
        currentScreen = 1;
-       nextScreen = 1;
      } 
  
  void draw(){
