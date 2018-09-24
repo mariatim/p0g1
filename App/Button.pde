@@ -8,6 +8,12 @@ float yy;
 float ww; 
 float hh;
  
+color red = color(214, 50, 21); 
+color pink = color(214, 21, 159); 
+color green1  = color(159, 21, 214); 
+color green2  = color(21, 214, 130); 
+
+
   /**
   Create button.
   Select position:
@@ -68,6 +74,8 @@ void toogleVisibility(){
   handlePosition(buttonPosition);
   rect(xx, yy, ww, hh, 7);
   textSize(32);
+  fill(red);
+  noStroke();
   text(buttonText, xx, yy);
 }
 

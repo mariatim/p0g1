@@ -3,12 +3,18 @@ Button button2;
 Button button3;
 Button button4;
 
+
+
 void showScreen1(){
   /**
   Start screen
   **/
-  background(214, 21, 159);
-  button1 = new Button("First screen button", 1);
+  
+  //background(214, 21, 159);
+  backgroundImage = loadImage("res/1.jpg");
+  background(backgroundImage);
+
+  button1 = new Button("Press to help!", 1);
 }
 
 void showScreen2(){

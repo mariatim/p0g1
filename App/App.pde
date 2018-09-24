@@ -1,6 +1,7 @@
 final int canvasSizeW = 841;
 final int canvasSizeH = 1189;
 int currentScreen;
+PImage backgroundImage;
  
  void setup() {
        size(841,1189);
