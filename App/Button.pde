@@ -2,6 +2,7 @@ class Button{
   
 String buttonText;
 boolean visible;
+int buttonPosition;
 float xx;
 float yy;
 float ww; 
@@ -18,20 +19,16 @@ float hh;
   **/
   public Button(String text, int position){
   buttonText = text;
-  handlePosition(position);
-  rect(xx, yy, ww, hh, 7);
-  textSize(32);
-  text(buttonText, xx, yy);
+  buttonPosition = position;  
+  toogleVisibility();
   }
 
 public void mouseClicked(){
-  println("Au");
-  fill(255);
-  redraw();
-}
-
-public void mousePressed(){
-  println("Auuuuu");
+  if ((visible) && (mouseX >= xx) && (mouseY >= yy) && (mouseX < (xx + ww)) && (mouseY < (yy + hh))){
+    println("Button clicked " + buttonText);
+    currentScreen ++;
+   } 
+ 
 }
 
 
@@ -59,6 +56,19 @@ void setPosition(float x, float y, float w, float h){
   yy = y;
   ww = w;
   hh = h;
+}
+
+void toogleVisibility(){
+
+  if (visible){
+    visible = false;
+  } else {
+    visible = true;
+  }
+  handlePosition(buttonPosition);
+  rect(xx, yy, ww, hh, 7);
+  textSize(32);
+  text(buttonText, xx, yy);
 }
 
   

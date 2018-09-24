@@ -1,26 +1,41 @@
 final int canvasSizeW = 841;
 final int canvasSizeH = 1189;
-Button[] buttons = new Button[5];
+int currentScreen;
+int nextScreen;
  
  void setup() {
        size(841,1189);
+       currentScreen = 1;
+       nextScreen = 1;
      } 
  
  void draw(){
-    noLoop();
-    background(192, 64, 0);
-    buttons[0] = new Button("click me!", 1);
+    showScreen();
  }
  
  
  public void mouseClicked() {
-   
-   if ((mouseX >= button.xx) && (mouseY >= button.yy) && (mouseX < (button.xx + button.ww)) && (mouseY < (button.yy + button.hh))){
-       button.mouseClicked();
-   } else {
-   println("no button");
-   }
-   
+  if (currentScreen == 1){
+  button1.mouseClicked();
+} else if (currentScreen == 2){
+  button2.mouseClicked();
+} else if (currentScreen == 3){
+  button3.mouseClicked();
+} else if (currentScreen == 4){
+  button4.mouseClicked();
+}   
+}
+
+public void showScreen(){
+if (currentScreen == 1){
+  showScreen1();
+} else if (currentScreen == 2){
+  showScreen2();
+} else if (currentScreen == 3){
+  showScreen3(1);
+} else if (currentScreen == 4){
+  showScreen4();
+}  
 }
  
 
